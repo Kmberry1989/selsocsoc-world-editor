@@ -1,0 +1,22 @@
+{
+  "editor": "world-editor",
+  "name": "World Editor",
+  "shares": [
+    {
+      "type": "world-layout",
+      "format": "json",
+      "location": "assets/default-layout.json",
+      "note": "World object layout consumed by the game"
+    },
+    {
+      "type": "texture",
+      "format": "png",
+      "location": "assets/textures/",
+      "note": "Ground/prop textures"
+    }
+  ],
+  "consumes": [
+    "object-creator"
+  ],
+  "npcManifest": "https://raw.githubusercontent.com/Kmberry1989/selsocsoc/main/assets/npc/manifest.json"
+}
