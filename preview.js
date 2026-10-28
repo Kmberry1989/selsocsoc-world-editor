@@ -67,6 +67,22 @@ const HELD_GLB = {
 const HAT_GLB = {
   'mayor-mayor': 'tophat.glb', 'gideon': 'tourcap.glb', 'fern-bramble': 'strawhat.glb',
   'stanley-stamp': 'mailcap.glb', 'bobby-gill': 'buckethat.glb',
+  'lyla-lens': 'press-fedora.glb', 'chip-chance': 'showman-bowler.glb',
+  'barnaby-bargain': 'bargain-bowler.glb', 'pip-parade': 'confetti-crown.glb',
+  'agnes-alley': 'cat-ears.glb', 'dottie-daly': 'quest-beret.glb',
+  'peggy-plank': 'hardhat.glb', 'mr-buck-coinsworth': 'banker-bowler.glb',
+};
+// User-directed 2026-10-28: cane/cape restored here too. The game roster
+// has no left held or back slot, so cane mirrors the right held slot
+// and the cape hangs behind the body from the shoulders.
+const LEFT_GLB = { 'gideon': 'cane.glb', 'chip-chance': 'microphone.glb' };
+const BACK_GLB = {
+  'mayor-mayor': 'cape.glb', 'gideon': 'tour-backpack.glb', 'lyla-lens': 'press-satchel.glb',
+  'chip-chance': 'dice-pouch.glb', 'barnaby-bargain': 'merchant-satchel.glb',
+  'pip-parade': 'festival-banner.glb', 'agnes-alley': 'cat-carrier.glb',
+  'dottie-daly': 'quest-tube.glb', 'peggy-plank': 'tool-roll.glb',
+  'mr-buck-coinsworth': 'money-bag.glb', 'fern-bramble': 'seed-pack.glb',
+  'stanley-stamp': 'mailbag.glb', 'bobby-gill': 'creel.glb',
 };
 // Game's 12 outskirts-cottage wall colours, world-expansion.js COTTAGES.
 const COTTAGE_COLORS = [
@@ -322,6 +338,8 @@ function buildNpcFigure(o, gen) {
     };
     attach(HELD_GLB[info.id], [0.46, 0.64, 0.14]);
     attach(HAT_GLB[info.id], [0, 1.93, 0]);
+    attach(LEFT_GLB[info.id], [-0.46, 0.64, 0.14]);
+    attach(BACK_GLB[info.id], [0, 0.55, -0.31]);
   }
   const sp = labelSprite(o.props?.npc || 'NPC');
   sp.position.y = 2.6; g.add(sp);
