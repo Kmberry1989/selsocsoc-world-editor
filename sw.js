@@ -1,5 +1,5 @@
 /* World Editor service worker — offline app shell (additive; never caches cross-origin) */
-const CACHE = 'world-editor-v1';
+const CACHE = 'world-editor-v2';
 const CORE = ['./', 'index.html', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 self.addEventListener('install', (e) => {
